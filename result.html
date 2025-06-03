@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Greenbells – Results</title>
+  <link rel="icon" href="images/favicon (1).ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+  <style>
+
+       * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f8fd;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 20px 20px;
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+   .head h1 {
+      font-size: 2.4rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-top: 100px;
+    }
+
+.head h2 {
+      font-weight: 400;
+      color: #3498db;
+      font-size: 1.2rem;
+      letter-spacing: 1.1px;
+      margin-top: 0;
+    }
+
+    .main-container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    .left-side {
+      flex: 1;
+      background: url('images/IMG-20250518-WA0015.jpg') no-repeat center center/cover;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Optional subtle overlay on image for better contrast */
+    .left-side::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.15);
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    .left-side-text {
+      position: relative;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 20px;
+      z-index: 1;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .right-side {
+      flex: 1;
+      padding: 40px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right-side h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: #34495e;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin: 16px 0 6px;
+      font-weight: 600;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 1rem;
+      border: 1.8px solid #ccc;
+      border-radius: 10px;
+      transition: border-color 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    select:focus, input[type="text"]:focus {
+      border-color: #2980b9;
+      outline: none;
+      box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      background: #2980b9;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(41,128,185,0.6);
+      transition: background 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button:hover {
+      background: #1c5980;
+      box-shadow: 0 7px 20px rgba(28,89,128,0.8);
+    }
+
+    #message {
+      margin-top: 22px;
+      font-weight: 600;
+      color: #e74c3c;
+      font-size: 1rem;
+      min-height: 24px;
+      text-align: center;
+    }
+
+    #message a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    #message a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .main-container {
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .left-side, .right-side {
+        border-radius: 0;
+      }
+
+      .left-side {
+        height: 220px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .right-side {
+        padding: 30px 25px 40px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      header h2 {
+        font-size: 1rem;
+      }
+
+      .right-side h3 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+          <header class="header">
+        <nav class="container">
+            <a href="index.html"><img src="images/logo gb 1.png" alt=""></a>
+            <div class="nav" id="toggle">
+                <i class="fa fa-times" aria-hidden="true" onclick="hidemenu()"></i> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="result.html">Result Portal</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showmenu()"></i>
+        </nav>
+    </header>
+  <div class="head">
+    <h1>Greenbells International School</h1>
+    <h2>Result Checking Portal</h2>
+  </div>
+
+  <div class="main-container">
+    <div class="left-side">
+      <div class="left-side-text">
+        
+      </div>
+    </div>
+    <div class="right-side">
+      <h3>Download Your Result</h3>
+      <form id="resultForm">
+        <label for="session">Academic Session:</label>
+        <select id="session" required>
+          <option value="" disabled selected>Select Session</option>
+          <option value="2023-2024">2023-2024</option>
+          <option value="2024-2025">2024-2025</option>
+        </select>
+
+        <label for="term">Term:</label>
+        <select id="term" required>
+          <option value="" disabled selected>Select Term</option>
+          <option value="first">First Term</option>
+          <option value="second">Second Term</option>
+          <option value="third">Third Term</option>
+        </select>
+
+        <label for="class">Class:</label>
+        <select id="class" required>
+          <option value="" disabled selected>Select Class</option>
+          <option value="Playgroup">PLAYGROUP</option>
+          <option value="Kindergarten">Kindergarten</option>
+          <option value="Nursery1">Nursery1</option>
+          <option value="Nursery2">Nursery2</option>
+          <option value="Primary1">PRIMARY1</option>
+          <option value="Primary2">PRIMARY2</option>
+          <option value="Primary3">PRIMARY3</option>
+          <option value="Primary4">PRIMARY4</option>
+          <option value="Primary5">PRIMARY5</option>
+          <option value="JSS1">JSS1</option>
+          <option value="JSS2">JSS2</option>
+          <option value="JSS3">JSS3</option>
+          <option value="SS1">SS1</option>
+          <option value="SS2">SS2</option>
+          <option value="SS3">SS3</option>
+        </select>
+
+        <label for="pin">Access PIN:</label>
+        <input type="text" id="pin" placeholder="Enter your access PIN" required />
+
+        <button type="submit">Get Result</button>
+      </form>
+      <div id="message"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script>
+   document.getElementById('resultForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const session = document.getElementById('session').value;
+  const term = document.getElementById('term').value;
+  const selectedClass = document.getElementById('class').value;
+  const pin = document.getElementById('pin').value.trim();
+
+  const messageDiv = document.getElementById('message');
+  messageDiv.textContent = 'Loading...';
+
+  if (!session || !term || !selectedClass || !pin) {
+    messageDiv.textContent = 'Please fill all the fields.';
+    return;
+  }
+
+  // Load CSV file with student data
+  fetch('data/RESULTS.csv')
+    .then(response => {
+      if (!response.ok) throw new Error('Could not load CSV file.');
+      return response.text();
+    })
+    .then(csvText => {
+      const data = csvToArray(csvText);
+
+      // Find student matching pin, class, and session (case-insensitive for class)
+      const student = data.find(row =>
+        row.Pin.trim() === pin &&
+        row.Class.trim().toLowerCase() === selectedClass.toLowerCase() &&
+        row.Session.trim() === session
+      );
+
+      if (!student) {
+        messageDiv.textContent = 'Invalid PIN, Class, or Session. Please check your inputs.';
+        return;
+      }
+
+      const filename = student.FileName.trim();
+      const filePath = `results/${session}/${term}/${selectedClass}/${filename}`;
+
+      // Check if the file exists by trying to fetch the PDF
+      fetch(filePath, { method: 'HEAD' })
+        .then(res => {
+if (res.ok) {
+  const filename = filePath.split('/').pop();
+
+  // Container div with flexbox, side by side, responsive
+  const container = document.createElement('div');
+  container.style.display = 'flex';
+  container.style.flexWrap = 'wrap';
+  container.style.gap = '15px';
+  container.style.alignItems = 'center';
+
+  // Simple SVG icon creator function
+  function createIcon(svgPath, extraAttrs = {}) {
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("width", "18");
+    svg.setAttribute("height", "18");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    for (const [k, v] of Object.entries(extraAttrs)) {
+      svg.setAttribute(k, v);
+    }
+    const path = document.createElementNS(svgNS, "path");
+    path.setAttribute("d", svgPath);
+    svg.appendChild(path);
+    svg.style.marginRight = '6px';
+    svg.style.verticalAlign = 'middle';
+    return svg;
+  }
+
+  // Eye icon (view)
+  function createEyeIcon() {
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("width", "18");
+    svg.setAttribute("height", "18");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+
+    const path1 = document.createElementNS(svgNS, "path");
+    path1.setAttribute("d", "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z");
+    svg.appendChild(path1);
+
+    const circle = document.createElementNS(svgNS, "circle");
+    circle.setAttribute("cx", "12");
+    circle.setAttribute("cy", "12");
+    circle.setAttribute("r", "3");
+    svg.appendChild(circle);
+
+    svg.style.marginRight = '6px';
+    svg.style.verticalAlign = 'middle';
+    return svg;
+  }
+
+  // Download icon
+  function createDownloadIcon() {
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("width", "18");
+    svg.setAttribute("height", "18");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+
+    const path1 = document.createElementNS(svgNS, "path");
+    path1.setAttribute("d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4");
+    svg.appendChild(path1);
+
+    const path2 = document.createElementNS(svgNS, "path");
+    path2.setAttribute("d", "M7 10l5 5 5-5");
+    svg.appendChild(path2);
+
+    const path3 = document.createElementNS(svgNS, "line");
+    path3.setAttribute("x1", "12");
+    path3.setAttribute("y1", "15");
+    path3.setAttribute("x2", "12");
+    path3.setAttribute("y2", "3");
+    svg.appendChild(path3);
+
+    svg.style.marginRight = '6px';
+    svg.style.verticalAlign = 'middle';
+    return svg;
+  }
+
+  // View link - simple inline link style
+  const viewLink = document.createElement('a');
+  viewLink.href = filePath;
+  viewLink.target = '_blank';
+  viewLink.rel = 'noopener noreferrer';
+  viewLink.style.display = 'inline-flex';
+  viewLink.style.alignItems = 'center';
+  viewLink.style.color = '#007bff';
+  viewLink.style.textDecoration = 'none';
+  viewLink.style.fontWeight = '500';
+  viewLink.style.fontSize = '1rem';
+  viewLink.appendChild(createEyeIcon());
+  viewLink.appendChild(document.createTextNode('View your result'));
+
+  viewLink.onmouseover = () => viewLink.style.textDecoration = 'underline';
+  viewLink.onmouseout = () => viewLink.style.textDecoration = 'none';
+
+  // Download link - also simple inline link style but clickable
+  const downloadLink = document.createElement('a');
+  downloadLink.href = filePath;
+  downloadLink.download = filename;
+  downloadLink.style.display = 'inline-flex';
+  downloadLink.style.alignItems = 'center';
+  downloadLink.style.color = '#28a745';
+  downloadLink.style.textDecoration = 'none';
+  downloadLink.style.fontWeight = '500';
+  downloadLink.style.fontSize = '1rem';
+  downloadLink.style.cursor = 'pointer';
+  downloadLink.appendChild(createDownloadIcon());
+  downloadLink.appendChild(document.createTextNode('Download your result'));
+
+  downloadLink.onmouseover = () => downloadLink.style.textDecoration = 'underline';
+  downloadLink.onmouseout = () => downloadLink.style.textDecoration = 'none';
+
+  // Append links side by side
+  container.appendChild(viewLink);
+  container.appendChild(downloadLink);
+
+  // Clear old message and add container
+  messageDiv.innerHTML = '';
+  messageDiv.appendChild(container);
+}
+ else {
+            messageDiv.textContent = 'Result file not found. Please contact the school.';
+          }
+        })
+        .catch(() => {
+          messageDiv.textContent = 'Error accessing the result file.';
+        });
+
+    })
+    .catch(() => {
+      messageDiv.textContent = 'Error loading student data.';
+    });
+    });
+
+// Utility function to convert CSV text to array of objects
+function csvToArray(str, delimiter = ',') {
+  const headers = str.slice(0, str.indexOf('\n')).split(delimiter);
+  const rows = str.slice(str.indexOf('\n') + 1).split('\n').filter(r => r.trim() !== '');
+
+  return rows.map(row => {
+    const values = row.split(delimiter);
+    return headers.reduce((obj, header, index) => {
+      obj[header.trim()] = values[index] ? values[index].trim() : '';
+      return obj;
+    }, {});
+  });
+}
+  </script>
+
+
+    <script>
+        var toggle = document.getElementById("toggle");
+        function showmenu(){
+            toggle.style.right = "0";
+        }
+        function hidemenu(){
+            toggle.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

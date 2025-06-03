@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenbells – Gallery</title>
+  <link rel="icon" href="images/favicon (1).ico">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+</head>
+<body>
+      <!-- Top Navigation Bar -->
+      <header class="header">
+        <nav class="container">
+            <a href="index.html"><img src="images/logo gb 1.png" alt=""></a>
+            <div class="nav" id="toggle">
+                <i class="fa fa-times" aria-hidden="true" onclick="hidemenu()"></i> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="result.html">Result Portal</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showmenu()"></i>
+        </nav>
+    </header>
+
+
+
+<section class="gallery-header">
+  <h1>Gallery</h1>
+  <p>Explore snapshots of our vibrant school life — from festive events to exciting activities and achievements.</p>
+</section>
+
+ <div id="EDU-FEST" class="gallery-section">
+    <h2>EDU FEST</h2>
+    <div class="gallery-grid"></div>
+  </div>
+
+  <div id="SPORTS" class="gallery-section">
+    <h2>PROPRIETRESS 55TH BIRTHDAY CELEBRATION</h2>
+    <div class="gallery-grid"></div>
+  </div>
+
+  <div id="EXTRACURRICULAR" class="gallery-section">
+    <h2>EXTRACURRICULAR</h2>
+    <div class="gallery-grid"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-controls">
+      <span class="lightbox-arrow" onclick="prevImage()">&#10094;</span>
+      <span class="lightbox-arrow" onclick="nextImage()">&#10095;</span>
+    </div>
+    <img id="lightbox-img" src="" alt="Expanded Image">
+    <a id="download-btn" class="download-btn" href="#" download>Download Image</a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><a href="mailto:school@example.com">greenbellsschool@gmail.com</a></p>
+            <p>Phone: (+234) 806-4601-961</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="result.html">Result Portal</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Our School. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+        <script>
+        var toggle = document.getElementById("toggle");
+        function showmenu(){
+            toggle.style.right = "0";
+        }
+        function hidemenu(){
+            toggle.style.right = "-200px";
+        }
+    </script>
+
+
+<script>
+const galleries = {
+  'EDU-FEST': {
+    basePath: 'gallery/EDU FEST/',
+    images: [
+   "IMG-20250330-WA0111.jpg",
+  "IMG-20250330-WA0184.jpg",
+  "IMG-20250527-WA0204.jpg",
+  "IMG-20250527-WA0205.jpg",
+  "IMG-20250527-WA0206.jpg",
+  "IMG-20250527-WA0228.jpg",
+  "IMG-20250527-WA0229.jpg",
+  "IMG-20250527-WA0232.jpg",
+  "IMG-20250527-WA0239.jpg",
+  "IMG-20250527-WA0240.jpg",
+  "IMG-20250527-WA0244.jpg",
+  "IMG-20250527-WA0272.jpg",
+  "IMG-20250527-WA0277.jpg",
+  "IMG-20250527-WA0280.jpg"
+  ]
+  },
+  'SPORTS': {
+    basePath: 'gallery/SPORTS/',
+    images: [
+  "IMG-20250527-WA0292.jpg",
+  "IMG-20250527-WA0301.jpg",
+  "IMG-20250527-WA0304.jpg",
+  "IMG-20250527-WA0308.jpg",
+  "IMG-20250527-WA0320.jpg",
+  "IMG-20250527-WA0321.jpg",
+  "IMG-20250527-WA0322.jpg",
+  "IMG-20250527-WA0325.jpg",
+  "IMG-20250527-WA0328.jpg",
+  "IMG-20250527-WA0329.jpg",
+  "IMG-20250527-WA0333.jpg",
+  "IMG-20250527-WA0334.jpg",
+  "IMG-20250527-WA0336.jpg",
+  "IMG-20250527-WA0337.jpg",
+  "IMG-20250527-WA0338.jpg",
+  "IMG-20250527-WA0340.jpg",
+  "IMG-20250527-WA0342.jpg"    ]
+  },
+  'EXTRACURRICULAR': {
+    basePath: 'gallery/EXTRACURRICULAR/',
+    images: [
+      'extra1.jpg',
+      'extra2.jpg'
+    ]
+  }
+};
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const downloadBtn = document.getElementById('download-btn');
+let currentSection = '', currentIndex = 0;
+
+// Load images into each section
+for (let section in galleries) {
+  const grid = document.querySelector(`#${section} .gallery-grid`);
+  const { basePath, images } = galleries[section];
+
+  images.forEach((filename, index) => {
+    const img = document.createElement('img');
+    img.src = basePath + filename;
+    img.className = 'gallery-img';
+    img.dataset.section = section;
+    img.dataset.index = index;
+    img.onclick = () => openLightbox(section, index);
+    grid.appendChild(img);
+  });
+}
+
+
+function openLightbox(section, index) {
+  currentSection = section;
+  currentIndex = index;
+
+  const { basePath, images } = galleries[section];
+  const direction = index > currentIndex ? 'slide-right' : 'slide-left';
+
+  lightboxImg.classList.remove('show', 'slide-left', 'slide-right');
+  lightboxImg.classList.add(direction);
+
+  setTimeout(() => {
+    const src = basePath + images[index];
+    lightboxImg.src = src;
+    downloadBtn.href = src;
+
+    lightboxImg.classList.remove('slide-left', 'slide-right');
+    lightboxImg.classList.add('show');
+  }, 100);
+
+  lightbox.style.display = 'flex';
+}
+
+function closeLightbox() {
+  lightbox.style.display = 'none';
+}
+
+function prevImage() {
+  const images = galleries[currentSection].images;
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  openLightbox(currentSection, currentIndex);
+}
+
+function nextImage() {
+  const images = galleries[currentSection].images;
+  currentIndex = (currentIndex + 1) % images.length;
+  openLightbox(currentSection, currentIndex);
+}
+
+function changeImage(n) {
+  const { basePath, images } = galleries[currentSection];
+  const newIndex = currentIndex + n;
+
+  if (newIndex >= 0 && newIndex < images.length) {
+    const direction = n > 0 ? 'slide-right' : 'slide-left';
+    lightboxImg.classList.remove('show');
+    lightboxImg.classList.add(direction);
+
+    setTimeout(() => {
+      currentIndex = newIndex;
+      const src = basePath + images[currentIndex];
+      lightboxImg.src = src;
+      downloadBtn.href = src;
+
+      lightboxImg.classList.remove('slide-left', 'slide-right');
+      lightboxImg.classList.add('show');
+    }, 100);
+  }
+}
+
+// Optional: Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (lightbox.style.display === 'flex') {
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'Escape') closeLightbox();
+  }
+});
+
+let startX = 0;
+let endX = 0;
+
+const lightboxElement = document.getElementById('lightbox');
+
+lightboxElement.addEventListener('touchstart', (e) => {
+  startX = e.changedTouches[0].screenX;
+});
+
+lightboxElement.addEventListener('touchend', (e) => {
+  endX = e.changedTouches[0].screenX;
+  handleGesture();
+});
+
+function handleGesture() {
+  if (endX < startX - 40) {
+    nextImage();
+  } else if (endX > startX + 40) {
+    prevImage();
+  }
+}
+
+    </script>
+
+    
+</body>
+</html>
