@@ -121,7 +121,7 @@ nav .fa{
     position: relative;
     height: 100vh;
     background-image: url('images/IMG-20250525-WA0017.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     margin-top: 0px; /* Account for fixed navbar */
   }
@@ -180,6 +180,7 @@ nav .fa{
     0% { background-image: url(images/IMG-20250518-WA0012.jpg); }
     25% { background-image: url(images/IMG-20250518-WA0017.jpg); }
     50% { background-image: url(images/IMG-20250518-WA0015.jpg); }
+        50% { background-image: url(images/IMG_20250530_154605_352.jpg); }
     75% { background-image: url(images/hh.jpeg); }
     100% { background-image: url(images/IMG-20250525-WA0009.jpg); }
 }
@@ -2783,8 +2784,8 @@ footer {
 
     .modal-image {
       width: 100%;
-      height: auto;
-      max-height: 300px;
+      height: 350px;
+      max-height: 500px;
       object-fit: cover;
       border-radius: 6px;
       margin-bottom: 20px;
