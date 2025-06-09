@@ -179,9 +179,10 @@ nav .fa{
 @keyframes zoomEffect {
     0% { background-image: url(images/IMG-20250518-WA0012.jpg); }
     25% { background-image: url(images/IMG-20250518-WA0017.jpg); }
-    50% { background-image: url(images/IMG-20250518-WA0015.jpg); }
+    25% { background-image: url(images/IMG-20250609-WA0044.jpg); }
+    50% { background-image: url(images/IMG-20250525-WA0017.jpg); }
         50% { background-image: url(images/lib.jpg); }
-    75% { background-image: url(images/men.jpeg); }
+    75% { background-image: url(images/IMG-20250330-WA0135.jpg); }
     100% { background-image: url(images/IMG-20250525-WA0009.jpg); }
 }
   
@@ -1356,7 +1357,7 @@ footer {
 
   /* Academics Page */
   .academics-hero {
-  background-image: url('images/about.jpg'); /* Replace with your image path */
+  background-image: url('images/IMG_8180.JPG'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   height: 70vh;
