@@ -2941,6 +2941,39 @@ a:hover {
 }
 
 /* Contact form */
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+.contact-wrapper h1, h2 {
+  color: #111827;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  box-sizing: border-box;
+}
+
+/* Wrapper layout */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; /* center on larger screens */
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+/* Contact form */
 .contact-form {
   flex: 1 1 400px;
   background: #fff;
@@ -2948,8 +2981,10 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
   transition: box-shadow 0.3s ease;
-  max-width: 500px; /* max width to keep it neat */
   box-sizing: border-box;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
 }
 .contact-form:hover {
   box-shadow: 0 12px 30px rgb(0 0 0 / 0.15);
@@ -3013,8 +3048,10 @@ button:hover {
   padding: 30px 30px 40px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
-  max-width: 450px; /* max width for neatness */
   box-sizing: border-box;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
 }
 .contact-info h2 {
   font-weight: 700;
@@ -3054,6 +3091,7 @@ button:hover {
   overflow: hidden;
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
   height: 300px;
+  width: 100%;
 }
 iframe {
   width: 100%;
@@ -3061,36 +3099,42 @@ iframe {
   border: none;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .contact-wrapper {
     flex-direction: column;
-    justify-content: center; /* center stacked items */
-    align-items: center; /* center stacked items horizontally */
+    align-items: center;
+    justify-content: center;
     gap: 30px;
   }
+
   .contact-form,
   .contact-info {
-    flex: 1 1 100%;
-    max-width: 500px; /* control width on small screens */
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
-/* Extra small screen tweaks */
 @media (max-width: 600px) {
   .container {
     padding: 30px 15px;
   }
+
   .map-container {
     height: 200px;
   }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
 }
 
-
-
-
-
-
-
-
-    
