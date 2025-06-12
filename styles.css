@@ -865,7 +865,6 @@ footer {
 .footer-links,
 .footer-social {
   flex: 1 1 250px;
-  min-width: 250px;
 }
 
 .footer-brand h3 {
@@ -945,33 +944,69 @@ footer {
   padding-top: 15px;
 }
 
-/* Responsive Design */
+/* Responsive for Small Screens */
 @media (max-width: 768px) {
+  footer {
+    padding: 15px 10px 10px;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .link-columns {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .link-columns ul {
-    align-items: center;
+    gap: 8px;
   }
 
   .footer-brand,
   .footer-links,
   .footer-social {
-    min-width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .footer-brand h3,
+  .footer-links h4,
+  .footer-social h4 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-brand p,
+  .link-columns li a {
+    font-size: 0.85rem;
+    margin: 2px 0;
+  }
+
+  .link-columns {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .link-columns ul {
+    padding: 0;
+    margin: 0 0 6px 0;
+  }
+
+  .link-columns li {
+    margin-bottom: 6px;
   }
 
   .footer-social .social-icons {
     justify-content: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .footer-social a {
+    font-size: 20px;
+  }
+
+  .footer-bottom {
+    margin-top: 12px;
+    padding-top: 8px;
+    font-size: 0.8rem;
   }
 }
+
 
 
 
