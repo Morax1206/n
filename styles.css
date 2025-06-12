@@ -53,7 +53,7 @@
     content: '';
     width: 0%;
     height: 2px;
-    background: red;
+    background: #ffd966;
     display: block;
     margin: auto;
     transition: 1s;
@@ -860,29 +860,30 @@ footer {
   margin: 0 auto;
 }
 
-.footer-brand,
+.footer-brands,
 .footer-links,
 .footer-social {
   flex: 1 1 20px;
 }
 
-.footer-brand h3 {
+.footer-brands h3 {
   color: #f7b733;
   margin-bottom: 10px;
 }
 
-.footer-brand p {
+.footer-brands p {
   margin: 5px 0;
   font-size: 0.95rem;
 }
 
-.footer-brand a {
+.footer-brands a {
   color: #f7b733;
   text-decoration: none;
 }
 
-.footer-brand a:hover {
-  text-decoration: underline;
+.footer-brands a:hover {
+  text-decoration: none;
+  color: #ffd966;
 }
 
 .footer-links h4,
@@ -916,6 +917,7 @@ footer {
 
 .link-columns a:hover {
   color: #f7b733;
+  text-decoration: none;
 }
 
 .footer-social .social-icons {
