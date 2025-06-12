@@ -437,7 +437,7 @@ h2 {
   .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 1%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
@@ -844,7 +844,6 @@ h2 {
 }
 
 
-/* Footer */
 footer {
   background-color: #1c1f26;
   color: #eee;
@@ -864,7 +863,7 @@ footer {
 .footer-brand,
 .footer-links,
 .footer-social {
-  flex: 1 1 250px;
+  flex: 1 1 20px;
 }
 
 .footer-brand h3 {
@@ -2928,7 +2927,7 @@ footer {
     @media (max-width: 768px) {
   .modal-content {
     width: 100%;
-    margin: 10% auto;
+    margin: 1% auto;
     padding: 20px;
   }
 
@@ -2948,13 +2947,16 @@ footer {
 
         /* Reset & base */
 
-  a {
+/* Links */
+a {
   color: #2563eb;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
+
+/* Headings */
 .contact-wrapper h1, h2 {
   color: #111827;
 }
@@ -2964,15 +2966,17 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 70px 20px;
+  box-sizing: border-box;
 }
 
-/* Grid layout */
+/* Wrapper layout */
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: center; /* center on larger screens */
+  align-items: flex-start;
   margin-top: 0;
-  justify-content: center; /* <-- center content horizontally */
 }
 
 /* Contact form */
@@ -3173,3 +3177,14 @@ iframe {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+    
